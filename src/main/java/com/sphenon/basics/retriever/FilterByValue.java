@@ -1,7 +1,7 @@
 package com.sphenon.basics.retriever;
 
 /****************************************************************************
-  Copyright 2001-2018 Sphenon GmbH
+  Copyright 2001-2024 Sphenon GmbH
 
   Licensed under the Apache License, Version 2.0 (the "License"); you may not
   use this file except in compliance with the License. You may obtain a copy
@@ -18,4 +18,5 @@ import com.sphenon.basics.context.*;
 
 public interface FilterByValue {
     public Object getValueAsObject(CallContext call_context);
+    public FilterByValue setValueAsObject(CallContext context, Object value);
 }

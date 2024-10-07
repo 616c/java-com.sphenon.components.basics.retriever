@@ -1,7 +1,7 @@
 package com.sphenon.basics.retriever;
 
 /****************************************************************************
-  Copyright 2001-2018 Sphenon GmbH
+  Copyright 2001-2024 Sphenon GmbH
 
   Licensed under the Apache License, Version 2.0 (the "License"); you may not
   use this file except in compliance with the License. You may obtain a copy
@@ -22,6 +22,7 @@ public interface RetrieverFilterFieldProcessor {
     public void processSortOrderField(CallContext context, String name, int sort_order, long sort_order_position);
     public void processLimitField(CallContext context, String name, int limit);
     public void processRetrieverFilter(CallContext context, String name, RetrieverFilter retriever_filter, boolean is_to_many_association, boolean is_derived);
+    public void processRetrieverFilter(CallContext context, String name, RetrieverFilter retriever_filter, boolean is_to_many_association, boolean is_derived, String treat_as);
     public void pushAttribute(CallContext context, String name, boolean is_to_many, String treat_as);
     public void popAttribute(CallContext context);
 }
